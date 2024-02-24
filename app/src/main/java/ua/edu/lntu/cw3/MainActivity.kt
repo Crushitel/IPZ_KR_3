@@ -32,7 +32,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Greeting("Android")
+                    VerticalScrollableList()
                 }
             }
         }
@@ -60,10 +60,26 @@ fun CustomListItem(
         Text(text = description, style = TextStyle(fontSize = 14.sp, color = Color.Red, background = Color.Green))
     }
 }
+@Composable
+fun VerticalScrollableList(){
+    val items = listOf<Triple<String, String, String>>(
+        Triple("Заголовок 1", "Опис елементу 1", "Опис 1"),
+        Triple("Заголовок 2", "Опис елементу 2", "Опис 2"),
+        Triple("Заголовок 3", "Опис елементу 3", "Опис 3"),
+        Triple("Заголовок 4", "Опис елементу 4", "Опис 4"),
+        Triple("Заголовок 5", "Опис елементу 5", "Опис 5"),
+        Triple("Заголовок 6", "Опис елементу 6", "Опис 6"),
+        Triple("Заголовок 7", "Опис елементу 7", "Опис 7"),
+        Triple("Заголовок 8", "Опис елементу 8", "Опис 8"),
+        Triple("Заголовок 9", "Опис елементу 9", "Опис 9"),
+        Triple("Заголовок 10", "Опис елементу 10", "Опис 10"),
+        Triple("Заголовок 11", "Опис елементу 11", "Опис 11"),
+    )
+}
 @Preview(showBackground = true)
 @Composable
-fun GreetingPreview() {
+fun PreviewList() {
     IPZ_KR_3Theme {
-        Greeting("Android")
+        VerticalScrollableList()
     }
 }

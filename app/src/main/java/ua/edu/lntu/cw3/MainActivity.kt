@@ -9,6 +9,8 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -75,8 +77,15 @@ fun VerticalScrollableList(){
         Triple("Заголовок 10", "Опис елементу 10", "Опис 10"),
         Triple("Заголовок 11", "Опис елементу 11", "Опис 11"),
     )
+    LazyColumn{
+        items(items) { item ->
+            CustomListItem(title = item.first,
+                subtitle = item.second,
+                description = item.third)
+        }
+    }
 }
-@Preview(showBackground = true)
+@Preview(showBackground = true, showSystemUi = true)
 @Composable
 fun PreviewList() {
     IPZ_KR_3Theme {

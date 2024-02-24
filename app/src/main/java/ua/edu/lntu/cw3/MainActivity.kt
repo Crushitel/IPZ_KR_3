@@ -30,13 +30,13 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
+fun CustomListItem(
+    title: String,
+    subtitle: String,
+    description: String
+){
 
+}
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
